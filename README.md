@@ -1,2 +1,2 @@
 # coforge_workspace
-Spring small project based on topics such as dependencies, IOC, autowiring etc.
+Spring small projects based on topics such as dependencies, IOC, autowiring etc.
