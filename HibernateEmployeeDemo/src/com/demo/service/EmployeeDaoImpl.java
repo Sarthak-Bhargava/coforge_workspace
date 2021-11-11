@@ -37,5 +37,44 @@ public class EmployeeDaoImpl implements EmployeeDAO {
 		
 		return employee;
 	}
+
+	@Override
+	public void deleteEmployeeById(Integer id) {
+		Transaction tx = null;
+		
+		try {
+			// enable the session by calling open session method
+			sessionObj = HibernateUtil.buildSessionFactory().openSession();
+			tx = sessionObj.beginTransaction();
+			Employee employee = (Employee)sessionObj.get(Employee.class, id);
+			sessionObj.delete(id);
+			tx.commit();
+		
+			}catch(Exception e) {
+				
+				if (tx != null)
+					tx.rollback();
+				e.printStackTrace();
+			}
+			 finally {
+					sessionObj.close();
+				}
+		
+		
+	}
+
+	@Override
+	public Employee updateStudentById(Employee employee) {
+		Transaction tx = null;
+		try {
+			tx = sessionObj.beginTransaction();
+			
+			
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return employee;
+	}
 	
 }
