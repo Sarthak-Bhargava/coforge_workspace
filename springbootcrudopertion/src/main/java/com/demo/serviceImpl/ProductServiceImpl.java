@@ -2,6 +2,7 @@ package com.demo.serviceImpl;
 
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,26 +33,28 @@ public class ProductServiceImpl implements ProductService {
 	}
 
 	@Override
-	public ArrayList<Product> ListOfProducts(Product product) {
-		// TODO Auto-generated method stub
-		return null;
+	public List<Product> ListOfProducts() {
+		
+		return productRepositary.findAll();
 	}
 
 	@Override
 	public void deleteProductById(long id) {
-		// TODO Auto-generated method stub
+		Product product = productRepositary.getById(id);
+		productRepositary.delete(product);
 		
 	}
 
 	@Override
 	public Optional<Product> getProductById(long id) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return this.productRepositary.findById(id);
 	}
 
 	@Override
 	public void updateOfProductById(long id) {
-		// TODO Auto-generated method stub
+		 Product product = productRepositary.getById(id);
+		 productRepositary.save(product);
 		
 	}
 

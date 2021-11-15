@@ -14,7 +14,11 @@ public class HeadOffice {
 		Employee employee = new Employee();
 		
 		do {
-			System.out.println("Enter your choice as per the operation to be perfprmed: ");
+			System.out.println("Enter your choice as per the operation to be perfprmed:\n "
+					+ "1. To create record\n"
+					+ "2. To update record\n"
+					+ "3. To delete record\n"
+					+ "4. To view list of Employees ");
 			choice = sc.nextInt();
 			switch(choice) {
 			case 1: System.out.println("Enter employee id: ");
@@ -30,7 +34,12 @@ public class HeadOffice {
 					employeeDaoImpl.addEmployee(employee);
 					System.out.println("Record added");
 					break;
-			default: System.out.println("Invalid Input");
+			case 2: System.out.println("Enter the id to update: ");
+					employeeDaoImpl.updateEmployee(sc.nextInt());
+			case 3: System.out.println("Enter the id to delete record");	
+					employeeDaoImpl.deleteEmployee(sc.nextInt());
+			case 4: employeeDaoImpl.getEmployeeList();
+			default: System.out.println("default");
 					 break;	
 			
 			
