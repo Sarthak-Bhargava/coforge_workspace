@@ -1,0 +1,79 @@
+PWC Java FSD Batch -1
+Learning Outcome - 27/07/2021 (Tuesday) AN
+
+  Callback Function in Javascript
+  Promises in Javascript
+  CRUD Operation using JSON Server
+  
+  1. Callback Function
+      It is a function which is passed as a parameter
+         to an already existing function.
+      
+     
+  2. Promises in Java 
+      Promises in Javascript are used to execute a function based
+       on the result.
+      It has got 2 states
+         1. resolve ---> when the function is executed successfully
+         2. reject  ---> when the function has an exception or not fully
+                          executed then it will reject
+                          
+         let promise = new Promise(resolve, reject)
+         
+   3. JSON SERVER
+   
+        run the server and establishes connection to the server
+        server is nothing but db.json file
+        db.json file contains database information
+        
+        1. Install the json-server
+            npm install -g json-server
+            
+        2. json-server db.json // to run the json-server
+              it will create an url
+              
+        url is used to perform CRUD operations using javascript
+        
+       HTTP Methods for CRUD
+       
+         POST ----------> Used to create a Data or Insert Data to server
+         GET  ----------> used to get the Data from the server
+         PUT  ----------> used to update the Data 
+         DELETE --------> used to delete a record
+       
+        We will write the code to perform CRUD operations using javascript
+        
+        
+        Project Structure for any CRUD Operations using Javascript
+        
+           JSONCRUD
+              |
+              |
+              |-------public
+              |         |
+              | 	 |
+              |	 |---js
+              |         |    |
+              |         |    |-----index.js
+              |	 |
+              |	 |-----index.html
+              |
+              |
+              |
+              |
+              |-------server
+              		|
+              		|-----db.json
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        

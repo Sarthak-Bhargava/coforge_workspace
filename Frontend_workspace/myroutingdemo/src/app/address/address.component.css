@@ -1,0 +1,13 @@
+h1 {                
+    color: rgb(54, 13, 238);
+    text-align: center;
+    background-color: aliceblue;
+  }
+  
+  p {
+
+    font-size: 30px;
+    text-align: justify;
+    color: rgb(3, 22, 2);
+    background-color: rgb(87, 128, 163);
+  }
