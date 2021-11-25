@@ -1,0 +1,42 @@
+.hero-unit-container{
+    background-image: url('/images/Image1.jpg');
+    height:70vh;
+    text-align: center;
+}
+.hero-unit-container h1{
+    margin: 0em;
+    padding-top: 20vh;
+    font-size: 5em;
+}
+.paper-layout-section{
+    background-color: #ddd;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 5vh;
+}
+
+.paper-layout-section h2{
+    text-align: center;
+}
+
+.paper-card-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 5vh;
+}
+
+.card img{
+    height: 35vh;
+    width:20vw;
+}
+
+.card{
+    background-color: white;
+    text-align: center;
+    height: 65vh;
+    width:20vw;
+    padding: 1em;
+    box-shadow: 5px 5px 30px grey; /*Paper layout projection*/
+}

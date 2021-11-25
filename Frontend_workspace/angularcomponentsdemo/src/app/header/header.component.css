@@ -1,0 +1,54 @@
+.header-container{
+    background-color: cadetblue;
+    height: 15vh;
+    border-bottom: 2px solid coral;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.company-logo{
+    height: 12vh;
+}
+
+.nav-bar{
+    margin-left: 10vw;
+}
+
+.nav-bar ul{
+    list-style-type: none;
+}
+
+.nav-bar ul li{
+    display: inline;
+    padding: 1em;
+}
+
+.nav-bar ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+.nav-bar ul li a:hover{
+    color: coral;
+    border-bottom: 1px solid white;
+    padding-bottom: 1em;
+}
+
+button{
+    background: coral;
+    color: white;
+    border: 2px solid white;
+    padding: 1em;
+    width: 10vw;
+    border-radius: 10px;
+}
+
+button:hover{
+    background:white;
+    color: coral;
+    border: 2px solid coral;
+    padding: 1em;
+    width: 10vw;
+    border-radius: 10px;
+}

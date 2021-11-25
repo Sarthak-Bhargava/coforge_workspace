@@ -1,0 +1,37 @@
+  
+<div class='card'>
+  <div class='card-header'>
+  
+  </div>
+
+
+
+  <div class="card-body">
+    enter number 1 or 2 or 3 : <input type='text' [(ngModel)]="num" />
+ 
+    <div [ngSwitch]="num">
+      <div *ngSwitchCase="'1'">One</div>
+      <div *ngSwitchCase="'2'">Two</div>
+      <div *ngSwitchCase="'3'">Three</div>
+  
+      <div *ngSwitchDefault>This is Default</div>
+    </div>
+  </div>
+
+     ...................{{title}}
+
+
+</div>
+
+
+//interpolation
+
+<ul>
+  <li *ngFor="let m of Movies">
+
+       {{m.name}}    
+       {{m.tname}}                
+  
+  </li>
+</ul>
+ 

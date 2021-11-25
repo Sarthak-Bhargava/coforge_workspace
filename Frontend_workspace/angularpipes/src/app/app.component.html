@@ -1,0 +1,27 @@
+<h1>Demonstartion on Angular Pipes</h1>
+<h2>Date Pipe usuage</h2>
+Full Date :{{todayDate}}
+<br>
+Short Date :{{todayDate | date:'shortDate'}}
+<br>
+Medium Date :{{todayDate | date:'mediumDate'}}
+<br>
+Time : {{todayDate | date:'HH:MM'}}<br />  
+Time : {{todayDate | date:'hh:mm:ss a'}}<br />  
+Time : {{todayDate | date:'hh:mm:ss p'}}<br />  
+<br><br>
+<h2>Number Pipes</h2>  
+No Formatting : {{amount}}<br />  
+2 Decimal Place : {{amount |number:'2.2-2'}}  
+
+<h2>Currency Pipes</h2>  
+No Formatting : {{amount}}<br />  
+USD Doller($) : {{amount |currency:'USD':true}}<br />  
+USD Doller : {{amount |currency:'USD':false}}<br />  
+INR() : {{amount |currency:'INR':true}}<br />  
+INR : {{amount |currency:'INR':false}}<br />  
+
+<h2>String Related Pipes</h2>  
+Actual Message : {{message}}<br />  
+Lower Case : {{message | lowercase}}<br />  
+Upper Case : {{message | uppercase}}<br />  

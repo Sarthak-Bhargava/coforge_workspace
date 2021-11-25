@@ -1,0 +1,11 @@
+h1{
+    text-align: center;
+    font-size: 2em;
+    color:tomato;
+    background-color:yellow;
+}
+p{
+    background-color:cadetblue;
+    text-align: justify;
+    color:darkred;
+}
