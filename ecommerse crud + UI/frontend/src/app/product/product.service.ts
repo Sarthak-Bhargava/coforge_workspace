@@ -1,43 +1,33 @@
-import { ProductService } from './employee.service';
-import { ProductComponent } from './product/product.component';
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
-@Component({
-  selector: 'app-product',
-  templateUrl: './product.component.html',
-  styleUrls: ['./product.component.css']
+@Injectable({
+  providedIn: 'root'
 })
-export class CreateEmployeeComponent implements OnInit {
+export class EmployeeService {
 
-  product: Product = new Product();
-  submitted = false;
+  private baseUrl = 'http://localhost:8080/product';
 
-  constructor(private productService: ProductService,
-    private router: Router) { }
+  constructor(private http: HttpClient) { }
 
-  ngOnInit() {
+  getProduct(id: number): Observable<any> {
+    return this.http.get(`${this.baseUrl}/${id}`);
+  }
+      // calling the backend api create employee method from here
+  createProduct(product: Object): Observable<Object> {
+    return this.http.post(`${this.baseUrl}`, product);
   }
 
-  newEmployee(): void {
-    this.submitted = false;
-    this.product = new Product();
+  updateProduct(id: number, value: any): Observable<Object> {
+    return this.http.put(`${this.baseUrl}/${id}`, value);
   }
 
-  save() {
-
-  this.productService.createEmployee(this.product).subscribe(data => {
-      
-    }, 
-    error => console.log(error));
+  deleteProduct(id: number): Observable<any> {
+    return this.http.delete(`${this.baseUrl}/${id}`, { responseType: 'text' });
   }
-
-  onSubmit() {
-    this.submitted = true;
-    this.save();    // this method is called on click submit
-  }
-
-  gotoList() {
-    this.router.navigate(['/products']);
+      //this method is to get list of all values
+  getProductList(): Observable<any> {
+    return this.http.get(`${this.baseUrl}`);
   }
 }
